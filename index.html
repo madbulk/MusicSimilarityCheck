@@ -67,9 +67,15 @@
     </div>
 
     <div>
-      <label for="audio-files" class="block font-medium mb-1">Upload your work(s) and any comparison track(s):</label>
-      <input type="file" id="audio-files" name="audio-files[]" accept="audio/*" multiple required class="w-full border border-gray-300 p-2 rounded">
-    </div>
+  <label for="audio-primary" class="block font-medium mb-1">Upload your primary track:</label>
+  <input type="file" id="audio-primary" name="audio-primary" accept="audio/*" required class="w-full border border-gray-300 p-2 rounded mb-2">
+</div>
+
+<div>
+  <label for="audio-secondary" class="block font-medium mb-1">Upload another track to compare (optional):</label>
+  <input type="file" id="audio-secondary" name="audio-secondary" accept="audio/*" class="w-full border border-gray-300 p-2 rounded">
+  <p class="text-sm text-gray-500 mt-1">Need to upload more? Just mention it in the notes and we’ll help.</p>
+</div>
 
     <div>
       <label for="deadline" class="block font-medium mb-1">Deadline (YYYY-MM-DD):</label>
