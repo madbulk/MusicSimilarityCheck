@@ -77,17 +77,22 @@
   <p class="text-sm text-gray-500 mt-1">Need to upload more? Just mention it in the notes and we’ll help.</p>
 </div>
 
-    <div>
-      <label for="deadline" class="block font-medium mb-1">Deadline (YYYY-MM-DD):</label>
-      <input id="deadline" name="deadline" placeholder="Deadline" required class="w-full rounded border p-2">
-    </div>
+   <div>
+  <label for="turnaround" class="block font-medium mb-1">Turnaround time:</label>
+  <select id="turnaround" name="turnaround" required class="w-full border border-gray-300 p-2 rounded">
+    <option value="">Select one</option>
+    <option value="standard">72 hours (Standard)</option>
+    <option value="rush">24 hours (Rush — 2× fee)</option>
+  </select>
+</div>
 
     <div>
       <label for="notes" class="block font-medium mb-1">Notes or concerns (e.g., track you might resemble):</label>
       <textarea id="notes" name="notes" rows="4" class="w-full rounded border p-2"></textarea>
     </div>
 
-    <button type="submit" class="rounded bg-emerald-600 px-4 py-2 text-white">Send &amp; Get Quote</button>
+  <button type="submit" class="rounded bg-emerald-600 px-4 py-2 text-white">Submit &amp; Get Started</button>
+
   </form>
 </section>
 
