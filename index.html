@@ -48,22 +48,43 @@
       <p class="mt-2"><strong>Flat fee:</strong> $550 – $1 000 (complexity + revisions determine final price).</p>
     </section>
 
-    <!-- Intake Form -->
-    <section id="form" class="rounded bg-white p-6 shadow">
-      <h2 class="mb-4 text-xl font-semibold">Submit Your Track</h2>
-      <form action="https://formspree.io/f/xkgzodoq" method="POST" enctype="multipart/form-data" class="space-y-4">
-        <input name="name" placeholder="Your name" required class="w-full rounded border p-2">
-        <input type="email" name="_replyto" placeholder="Email" required class="w-full rounded border p-2">
-       <div>
-          <label for="audio-files">Upload your audio file(s) (MP3, WAV, etc.):</label>
-          <input type="file" id="audio-files" name="audio-files" accept="audio/*" multiple required class="w-full border border-gray-300 p-2 rounded">
-        </div>       
-        <input name="deadline" placeholder="Deadline (YYYY-MM-DD)" required class="w-full rounded border p-2">
-        <textarea name="notes" placeholder="Notes" class="w-full rounded border p-2"></textarea>
-        <button type="submit" class="rounded bg-emerald-600 px-4 py-2 text-white">Send &amp; Get Quote</button>
-      </form>
-      <p class="mt-2 text-xs text-gray-600">*This musicology opinion is expert analysis, not legal advice. Always consult qualified counsel.</p>
-    </section>
+<!-- Intake Form -->
+<section id="form" class="rounded bg-white p-6 shadow">
+  <h2 class="mb-4 text-xl font-semibold">Submit Your Track</h2>
+  <p class="mb-4 text-gray-600">We'll respond quickly with a quote and next steps. Your submission is secure and confidential.</p>
+  <form action="https://formspree.io/f/xkgzodoq" method="POST" enctype="multipart/form-data" class="space-y-4">
+    
+    <input type="hidden" name="_subject" value="New Submission: Music Similarity Check">
+
+    <div>
+      <label for="name" class="block font-medium mb-1">Your name:</label>
+      <input id="name" name="name" placeholder="Your name" required class="w-full rounded border p-2">
+    </div>
+
+    <div>
+      <label for="_replyto" class="block font-medium mb-1">Email:</label>
+      <input type="email" id="_replyto" name="_replyto" placeholder="Email" required class="w-full rounded border p-2">
+    </div>
+
+    <div>
+      <label for="audio-files" class="block font-medium mb-1">Upload your work(s) and any comparison track(s):</label>
+      <input type="file" id="audio-files" name="audio-files[]" accept="audio/*" multiple required class="w-full border border-gray-300 p-2 rounded">
+    </div>
+
+    <div>
+      <label for="deadline" class="block font-medium mb-1">Deadline (YYYY-MM-DD):</label>
+      <input id="deadline" name="deadline" placeholder="Deadline" required class="w-full rounded border p-2">
+    </div>
+
+    <div>
+      <label for="notes" class="block font-medium mb-1">Notes or concerns (e.g., track you might resemble):</label>
+      <textarea id="notes" name="notes" rows="4" class="w-full rounded border p-2"></textarea>
+    </div>
+
+    <button type="submit" class="rounded bg-emerald-600 px-4 py-2 text-white">Send &amp; Get Quote</button>
+  </form>
+</section>
+
   </main>
 
   <footer class="py-8 text-center text-sm text-gray-600">© 2025 Brian McBrearty · MusicSimilarityCheck.com</footer>
