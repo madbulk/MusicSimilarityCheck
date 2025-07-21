@@ -54,8 +54,10 @@
       <form action="https://formspree.io/f/xkgzodoq" method="POST" enctype="multipart/form-data" class="space-y-4">
         <input name="name" placeholder="Your name" required class="w-full rounded border p-2">
         <input type="email" name="_replyto" placeholder="Email" required class="w-full rounded border p-2">
-        <label for="audio">Upload audio (MP3, WAV, etc.):</label>
-        <input type="file" name="audio" accept=".mp3,.wav,.m4a" required>
+       <div>
+          <label for="audio-files">Upload your audio file(s) (MP3, WAV, etc.):</label>
+          <input type="file" id="audio-files" name="audio-files" accept="audio/*" multiple required class="w-full border border-gray-300 p-2 rounded">
+        </div>       
         <input name="deadline" placeholder="Deadline (YYYY-MM-DD)" required class="w-full rounded border p-2">
         <textarea name="notes" placeholder="Notes" class="w-full rounded border p-2"></textarea>
         <button type="submit" class="rounded bg-emerald-600 px-4 py-2 text-white">Send &amp; Get Quote</button>
