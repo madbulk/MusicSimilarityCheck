@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You – Payment & Next Steps</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <div class="max-w-2xl mx-auto p-6 mt-10 bg-white rounded shadow">
+    <h1 class="text-2xl font-bold mb-4">Thanks for your submission!</h1>
+    <p class="mb-4">I’ve received your materials and will review them shortly. To proceed, please complete payment using one of the options below. If you need help or prefer a custom invoice, <a href="mailto:you@example.com?subject=Request for Invoice" class="text-blue-600 underline">click here</a>.</p>
+
+    <h2 class="text-xl font-semibold mt-6 mb-2">Step 1: Choose Your Turnaround Time</h2>
+    <ul class="mb-4 list-disc pl-6">
+      <li><strong>Standard (72 hours)</strong> – $495</li>
+      <li><strong>Expedited (24 hours)</strong> – $990</li>
+    </ul>
+
+    $1
+<!-- Secure Payment Logos -->
+<div class="flex items-center space-x-4 mb-4">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/stripe.svg" alt="Stripe" class="h-6 w-auto" />
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/paypal.svg" alt="PayPal" class="h-6 w-auto" />
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/zelle.svg" alt="Zelle" class="h-6 w-auto" />
+</div>
+
+<!-- Payment Options Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+  <div>
+    <h3 class="font-semibold mb-1">Stripe (72-Hour Review)</h3>
+    <a href="https://buy.stripe.com/standard-link" target="_blank" class="inline-block w-full text-center bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700">
+      Pay $495
+    </a>
+  </div>
+  <div>
+    <h3 class="font-semibold mb-1">Stripe (24-Hour Rush)</h3>
+    <a href="https://buy.stripe.com/expedited-link" target="_blank" class="inline-block w-full text-center bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700">
+      Pay $990
+    </a>
+  </div>
+  <div>
+    <h3 class="font-semibold mb-1">PayPal</h3>
+    <a href="https://www.paypal.me/yourhandle/495" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+      Pay with PayPal
+    </a>
+  </div>
+  <div>
+    <h3 class="font-semibold mb-1">Zelle</h3>
+    <div class="w-full border border-gray-300 p-4 rounded text-center">
+      Send to: <strong>you@example.com</strong><br>
+      <span class="text-xs text-gray-500">(Include your name in memo)</span>
+    </div>
+  </div>
+</div><h2 class="text-xl font-semibold mt-6 mb-2">Need More Help?</h2>
+    <p class="mb-4">Click <a href="mailto:you@example.com?subject=Request for Help" class="text-blue-600 underline">here</a> to request a custom invoice or ask any questions.</p>
+
+    <hr class="my-6">
+    <p class="text-sm text-gray-600">
+      By submitting payment, you agree to the terms of service and our standard <a href="#" class="underline">Letter of Engagement</a>. This includes an initial review and written opinion. Additional consulting, if necessary, may incur further charges.
+    </p>
+  </div>
+</body>
+</html>
