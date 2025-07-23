@@ -97,6 +97,17 @@ select {
   box-shadow: none;
 }
 
+/* Hide the “Start Your Review” button on desktop */
+.scroll {
+  display: inline-block;   /* show by default (mobile) */
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .scroll {
+    display: none;         /* hide on tablets/desktops */
+  }
+}
 
 
 /* ========== Buttons (Actions Only) ========== */
