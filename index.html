@@ -81,52 +81,45 @@
         We’ll respond quickly with a quote and next steps. Your submission is secure and confidential.
       </p>
 
-      <!-- ===== Formspree form (emails you + redirects) ===== -->
-      <form action="https://formspree.io/f/xkgzodoq"
-            method="POST"
-            enctype="multipart/form-data"
-            class="space-y-4">
+     <!-- ===== Formspree form (emails you + redirects) ===== -->
+<form action="https://formspree.io/f/xkgzodoq"
+      method="POST"
+      enctype="multipart/form-data"
+      class="space-y-4">
 
-        <input type="hidden" name="_subject" value="New Submission: Music Similarity Check" />
-        <input type="hidden" name="_next"    value="https://musicsimilaritycheck.com/thanks.html" />
+  <input type="hidden" name="_subject" value="New Submission: Music Similarity Check">
+  <input type="hidden" name="_next"    value="https://musicsimilaritycheck.com/thanks.html">
 
-        <div>
-          <label for="name" class="block font-medium mb-1">Your name</label>
-          <input type="text" id="name" name="name" required class="input" />
-        </div>
+  <div>
+    <label for="name" class="block font-medium mb-1">Your name</label>
+    <input type="text" id="name" name="name" required class="input">
+  </div>
 
-        <div>
-          <label for="email" class="block font-medium mb-1">Email</label>
-          <!-- Formspree expects _replyto for reply-to address -->
-          <input type="email" id="email" name="_replyto" required class="input" />
-        </div>
+  <div>
+    <label for="email" class="block font-medium mb-1">Email</label>
+    <input type="email" id="email" name="_replyto" required class="input">
+  </div>
 
-        <div>
-          <label for="audio-primary" class="block font-medium mb-1">Upload your primary track</label>
-          <input type="file" id="audio-primary" name="audio-primary" accept="audio/*" required class="input" />
-        </div>
+  <div>
+    <label for="audio-primary" class="block font-medium mb-1">Upload your primary track</label>
+    <input type="file" id="audio-primary" name="audio-primary" accept="audio/*" required class="input">
+    <small class="text-sm">MP3, WAV, or AIFF • max&nbsp;25&nbsp;MB</small>
+  </div>
 
-        <div>
-          <label for="audio-secondary" class="block font-medium mb-1">Upload another track to compare (optional)</label>
-          <input type="file" id="audio-secondary" name="audio-secondary" accept="audio/*" class="input" />
-        </div>
+  <div>
+    <label for="audio-secondary" class="block font-medium mb-1">Upload another track to compare (optional)</label>
+    <input type="file" id="audio-secondary" name="audio-secondary" accept="audio/*" class="input">
+    <small class="text-sm">MP3, WAV, or AIFF • max&nbsp;25&nbsp;MB</small>
+  </div>
 
-        <div>
-          <label for="turnaround" class="block font-medium mb-1">Turnaround & Fee</label>
-          <select id="turnaround" name="turnaround" required class="input">
-            <option value="">Select one</option>
-            <option value="standard">72 hours (Standard — $495)</option>
-            <option value="rush">24 hours (Rush — $990)</option>
-          </select>
-        </div>
+  <div>
+    <label for="notes" class="block font-medium mb-1">Notes or concerns</label>
+    <textarea id="notes" name="notes" rows="4" class="input"></textarea>
+  </div>
 
-        <div>
-          <label for="notes" class="block font-medium mb-1">Notes or concerns</label>
-          <textarea id="notes" name="notes" rows="4" class="input"></textarea>
-        </div>
+  <button type="submit" class="btn btn-green w-full">Submit &amp; Get Started</button>
+</form>
 
-        <button type="submit" class="btn btn-green w-full">Submit & Get Started</button>
-      </form>
 
       <footer class="border-t pt-4 text-center space-y-2">
         <p class="text-sm">&copy; 2025 Musicologize &middot; MusicSimilarityCheck.com</p>
