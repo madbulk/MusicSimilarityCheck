@@ -1,0 +1,103 @@
+
+/* Base styles */
+body {
+  background-color: #fafafa; /* zinc-50 */
+  color: #0f172a; /* slate-900 */
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 1.875rem; /* text-3xl */
+}
+
+h2 {
+  font-size: 1.25rem; /* text-xl */
+}
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Layout and spacing */
+header, footer {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+main {
+  max-width: 48rem; /* max-w-3xl */
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+ul {
+  padding-left: 1.5rem; /* ml-6 */
+  list-style-type: disc;
+}
+
+ol {
+  padding-left: 1.5rem;
+  list-style-type: decimal;
+}
+
+a {
+  display: inline-block;
+  background-color: #059669; /* emerald-600 */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  margin-top: 1.25rem;
+}
+
+a:hover {
+  background-color: #047857;
+}
+
+/* Form */
+form {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  border-radius: 0.375rem;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color: #059669;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #047857;
+}
+
+/* Footer */
+footer {
+  font-size: 0.875rem;
+  color: #4b5563; /* gray-600 */
+}
