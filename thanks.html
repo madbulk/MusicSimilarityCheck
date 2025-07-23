@@ -3,96 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You – MusicSimilarityCheck</title>
+  <title>Thank You – MusicSimilarityCheck</title>
+
   <link rel="stylesheet" href="style.css" />
 
   <link rel="icon" href="/assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 
-
-  <!-- Google Analytics -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-80MDTLB0JK"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-80MDTLB0JK');
-  </script>
-  <script>
-    function trackPayment(method) {
-      gtag('event', 'payment_click', {
-        event_category: 'Payment',
-        event_label: method
-      });
+    function trackPayment(method){
+      gtag('event','payment_click',{event_category:'Payment',event_label:method});
     }
   </script>
 </head>
+
 <body class="bg-light text-dark font-sans">
-  <main class="flex-center p-6 min-h-screen bg-light">
-    <section class="card max-w-2xl w-full">
-      <h1 class="text-2xl font-semibold mb-4">Thank you for your submission!</h1>
-      <p class="mb-4 leading-relaxed">
+  <main class="flex-center p-6 bg-light">
+    <section class="card max-w-2xl space-y-6">
+      <h1 class="text-2xl font-semibold">Thank you for your submission!</h1>
+      <p class="leading-relaxed">
         We’ve received your track(s) and submission details. To proceed, please complete payment using one of the options below.
-        If you need help or prefer a custom invoice, <a href="mailto:support@musicsimilaritycheck.com" class="link">contact us here</a>.
+        Need help or prefer a custom invoice? <a href="mailto:support@musicsimilaritycheck.com" class="link">Contact us here</a>.
       </p>
 
-      <h2 class="text-xl font-medium mb-2">Step 1: Choose Your Review Speed</h2>
-      <ul class="list mb-6">
-        <li><strong>Standard (72hr)</strong> — $495</li>
-        <li><strong>Expedited (24hr)</strong> — $990</li>
+      <h2 class="text-xl font-medium">Step 1: Choose Your Review Speed</h2>
+      <ul class="list mb-4">
+        <li><strong>Standard (72 hr)</strong> — $495</li>
+        <li><strong>Expedited (24 hr)</strong> — $990</li>
       </ul>
 
-      <h2 class="text-xl font-medium mb-2">Step 2: Complete Your Payment</h2>
-      <p class="mb-4">Choose one of the secure payment options below:</p>
+      <h2 class="text-xl font-medium">Step 2: Complete Your Payment</h2>
+      <p class="mb-4">Select a secure payment option:</p>
 
-      <div class="grid-2 gap-4 mb-8">
+      <div class="grid-2 gap-4">
         <a href="https://buy.stripe.com/test_eVqaEZceEdXo0TV36l3AY01" target="_blank"
-           onclick="trackPayment('Stripe – 72hr');" class="btn btn-green">
-          Credit Card via Stripe — $495 (72hr)
+           onclick="trackPayment('Stripe – 72hr');" class="btn btn-green">
+          Credit Card via Stripe — $495 (72 hr)
         </a>
         <a href="https://buy.stripe.com/test_eVqaEZceEdXo0TV36l3AY01" target="_blank"
-           onclick="trackPayment('Stripe – 24hr');" class="btn btn-green">
-          Credit Card via Stripe — $990 (24hr)
+           onclick="trackPayment('Stripe – 24hr');" class="btn btn-green">
+          Credit Card via Stripe — $990 (24 hr)
         </a>
         <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=438T372EVN63A"
-           target="_blank" onclick="trackPayment('PayPal – 72hr');" class="btn btn-blue">
-          PayPal — $495 (72hr)
+           target="_blank" onclick="trackPayment('PayPal – 72hr');" class="btn btn-blue">
+          PayPal — $495 (72 hr)
         </a>
         <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6DMC5GTNB96Q2"
-           target="_blank" onclick="trackPayment('PayPal – 24hr');" class="btn btn-blue">
-          PayPal — $990 (24hr)
+           target="_blank" onclick="trackPayment('PayPal – 24hr');" class="btn btn-blue">
+          PayPal — $990 (24 hr)
         </a>
       </div>
 
-      <h2 class="text-xl font-medium mb-2">Service Terms</h2>
-      <p class="text-sm mb-4">By submitting this form and completing payment, you agree to the following:</p>
-      <ul class="list text-sm mb-6 leading-relaxed">
-        <li><strong>Scope of Work:</strong> This service provides a one-time, pre-release music similarity risk opinion, delivered as a written PDF. It is not legal advice.</li>
-        <li><strong>Turnaround:</strong> Standard deliveries are within 72 hours; expedited reviews (24 hours) incur double the base fee.</li>
-        <li><strong>Revisions:</strong> Minor formatting or clarification edits are included at no extra cost. Substantive additional analysis or consultations beyond two hours will be billed at our standard hourly rate.</li>
-        <li><strong>Confidentiality:</strong> All materials you submit and our report are strictly confidential and may be used in internal, agency, or label review—but not for public distribution without permission.</li>
-        <li><strong>Liability:</strong> Our opinion is based on professional musicological methods but cannot prevent all claims. Under no circumstances shall our liability exceed the fees paid for this service.</li>
-        <li><strong>Governing Law:</strong> These terms are governed by the laws of California, USA.</li>
+      <h2 class="text-xl font-medium">Service Terms</h2>
+      <p class="text-sm">By submitting and paying, you agree to:</p>
+      <ul class="list text-sm leading-relaxed">
+        <li><strong>Scope:</strong> One‑time pre‑release similarity review delivered as a PDF; not legal advice.</li>
+        <li><strong>Turnaround:</strong> 72 hr standard; 24 hr expedited (double fee).</li>
+        <li><strong>Revisions:</strong> Minor clarifications free; deeper work billed hourly.</li>
+        <li><strong>Confidentiality:</strong> All submitted materials and reports remain confidential.</li>
+        <li><strong>Liability:</strong> Our liability is capped at fees paid.</li>
+        <li><strong>Governing Law:</strong> California, USA.</li>
       </ul>
-   
-      <footer class="text-center text-sm py-4">
-  <p><br><br><br>
-    <a href="/" class="link mr-4">Home</a><br>
-    <a href="https://musicologize.com/" class="link mr-4" target="_blank" rel="noopener">Forensic musicology insights</a><br>
-    <a href="https://soundcomet.com/" class="link" target="_blank" rel="noopener">AI ideas for composers</a><br><br>
-  </p>
-  <p class="mt-2">&copy; 2025 Musicologize &middot; MusicSimilarityCheck.com</p>
-</footer>
-    
-    
+
+      <footer class="text-center border-t pt-4 space-y-2 text-sm">
+        <nav class="space-x-4">
+          <a href="/" class="link">Home</a>
+          <a href="https://musicologize.com/" class="link" target="_blank" rel="noopener">Forensic musicology insights</a>
+          <a href="https://soundcomet.com/" class="link" target="_blank" rel="noopener">AI ideas for composers</a>
+        </nav>
+        <p>&copy; 2025 Musicologize &middot; MusicSimilarityCheck.com</p>
+      </footer>
     </section>
-
-
-
-  
   </main>
-
-  
 </body>
 </html>
