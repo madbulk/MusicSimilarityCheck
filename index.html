@@ -83,78 +83,67 @@
 </head>
 <body class="bg-light text-dark font-sans">
   <main class="flex-center p-6 min-h-screen bg-light">
-    <section class="card max-w-3xl w-full">
-      <header class="mb-6 text-center">
-        <h1 class="text-3xl font-semibold mb-2">Music Similarity Risk Opinion Letter</h1>
-        <p class="text-base text-muted">Choose 24‑hr (Rush) or 72‑hr (Standard) turnaround</p>
-      </header>
+    <section class="card max-w-2xl w-full">
+      <h1 class="text-2xl font-semibold mb-2 text-center">Music Similarity Risk Opinion Letter</h1>
+      <p class="text-base text-muted text-center mb-6">Choose <strong>Standard (72 hr) $495</strong> or <strong>Rush (24 hr) $990</strong></p>
 
-      <section class="mb-8">
-        <h2 class="text-xl font-medium mb-2">What I Do</h2>
-        <p class="leading-relaxed">I audit your track—either against a named reference or, if none is provided, by scanning for protectable elements that echo well‑known songs. Any risky passages are flagged and practical musical fixes suggested.</p>
-      </section>
+      <h2 class="text-xl font-medium mb-2">What I Do</h2>
+      <p class="leading-relaxed mb-6">I audit your track—either against a named reference or, if none is provided, by scanning for protectable elements that echo well‑known songs. Any risky passages are flagged and practical musical fixes suggested.</p>
 
-      <section class="mb-8">
-        <h2 class="text-xl font-medium mb-2">Why It Matters</h2>
-        <ul class="list mb-4 leading-relaxed">
-          <li><strong>Secure placements.</strong> Rights teams often require documented review before broadcast.</li>
-          <li><strong>Avoid costly rewrites.</strong> Fix issues now—not under threat of litigation.</li>
-          <li><strong>Reduce statutory‑damage exposure.</strong> A documented good‑faith review weighs against any claim of <em>willful</em> infringement.*</li>
-        </ul>
-      </section>
+      <h2 class="text-xl font-medium mb-2">Why It Matters</h2>
+      <ul class="list mb-6 leading-relaxed">
+        <li><strong>Secure placements.</strong> Rights teams often require documented review before broadcast.</li>
+        <li><strong>Avoid costly rewrites.</strong> Fix issues now—not under threat of litigation.</li>
+        <li><strong>Reduce statutory‑damage exposure.</strong> A documented good‑faith review weighs against any claim of <em>willful</em> infringement.*</li>
+      </ul>
 
-      <section class="mb-8">
-        <h2 class="text-xl font-medium mb-2">How It Works</h2>
-        <ol class="list-decimal mb-4 ml-6 leading-relaxed">
-          <li>Upload your track (and any reference song).</li>
-          <li>Receive quote & timeline confirmation (usually minutes).</li>
-          <li>Get your PDF opinion letter within the chosen timeframe.</li>
-        </ol>
-        <p><strong>Flat fee:</strong> $495 (72 hr) or $990 (24 hr).</p>
-      </section>
+      <h2 class="text-xl font-medium mb-2">How It Works</h2>
+      <ol class="list-decimal ml-6 mb-6 leading-relaxed">
+        <li>Upload your track (and any reference song).</li>
+        <li>Receive quote & timeline confirmation (usually minutes).</li>
+        <li>Get your PDF opinion letter within the chosen timeframe.</li>
+      </ol>
 
       <!-- Intake Form -->
-      <section id="form" class="mb-8">
-        <h2 class="text-xl font-medium mb-2">Submit Your Track</h2>
-        <p class="mb-4 leading-relaxed">We’ll respond quickly with a quote and next steps. Your submission is secure and confidential.</p>
-        <form name="msc-quote" method="POST" data-netlify="true" enctype="multipart/form-data">
-          <input type="hidden" name="form-name" value="msc-quote" />
-          <div class="grid gap-4 md:grid-cols-2">
-            <div class="col-span-2 md:col-span-1">
-              <label for="name" class="block font-medium mb-1">Your name</label>
-              <input id="name" name="name" required class="input" />
-            </div>
-            <div class="col-span-2 md:col-span-1">
-              <label for="email" class="block font-medium mb-1">Email</label>
-              <input type="email" id="email" name="email" required class="input" />
-            </div>
-            <div class="col-span-2">
-              <label for="audio-primary" class="block font-medium mb-1">Upload your primary track</label>
-              <input type="file" id="audio-primary" name="audio-primary" accept="audio/*" required class="input" />
-            </div>
-            <div class="col-span-2">
-              <label for="audio-secondary" class="block font-medium mb-1">Upload another track to compare (optional)</label>
-              <input type="file" id="audio-secondary" name="audio-secondary" accept="audio/*" class="input" />
-            </div>
-            <div class="col-span-2 md:col-span-1">
-              <label for="turnaround" class="block font-medium mb-1">Turnaround time</label>
-              <select id="turnaround" name="turnaround" required class="input">
-                <option value="">Select one</option>
-                <option value="standard">72 hours (Standard)</option>
-                <option value="rush">24 hours (Rush — 2× fee)</option>
-              </select>
-            </div>
-            <div class="col-span-2 md:col-span-1">
-              <label for="notes" class="block font-medium mb-1">Notes or concerns</label>
-              <textarea id="notes" name="notes" rows="4" class="input"></textarea>
-            </div>
+      <h2 id="form" class="text-xl font-medium mb-2">Submit Your Track</h2>
+      <p class="mb-4 leading-relaxed">We’ll respond quickly with a quote and next steps. Your submission is secure and confidential.</p>
+      <form name="msc-quote" method="POST" data-netlify="true" enctype="multipart/form-data">
+        <input type="hidden" name="form-name" value="msc-quote" />
+        <div class="grid gap-4 md:grid-cols-2">
+          <div class="col-span-2 md:col-span-1">
+            <label for="name" class="block font-medium mb-1">Your name</label>
+            <input id="name" name="name" required class="input" />
           </div>
-          <p id="errors" class="text-red-600 mt-4" aria-live="assertive"></p>
-          <button type="submit" class="btn btn-green mt-6">Submit & Get Started</button>
-        </form>
-      </section>
+          <div class="col-span-2 md:col-span-1">
+            <label for="email" class="block font-medium mb-1">Email</label>
+            <input type="email" id="email" name="email" required class="input" />
+          </div>
+          <div class="col-span-2">
+            <label for="audio-primary" class="block font-medium mb-1">Upload your primary track</label>
+            <input type="file" id="audio-primary" name="audio-primary" accept="audio/*" required class="input" />
+          </div>
+          <div class="col-span-2">
+            <label for="audio-secondary" class="block font-medium mb-1">Upload another track to compare (optional)</label>
+            <input type="file" id="audio-secondary" name="audio-secondary" accept="audio/*" class="input" />
+          </div>
+          <div class="col-span-2 md:col-span-1">
+            <label for="turnaround" class="block font-medium mb-1">Turnaround time</label>
+            <select id="turnaround" name="turnaround" required class="input">
+              <option value="">Select one</option>
+              <option value="standard">72 hours (Standard)</option>
+              <option value="rush">24 hours (Rush — 2× fee)</option>
+            </select>
+          </div>
+          <div class="col-span-2 md:col-span-1">
+            <label for="notes" class="block font-medium mb-1">Notes or concerns</label>
+            <textarea id="notes" name="notes" rows="4" class="input"></textarea>
+          </div>
+        </div>
+        <p id="errors" class="text-red-600 mt-4" aria-live="assertive"></p>
+        <button type="submit" class="btn btn-green mt-6">Submit & Get Started</button>
+      </form>
 
-      <footer class="text-sm text-center text-muted pt-4 border-t">
+      <footer class="text-sm text-center text-muted pt-4 border-t mt-8">
         <p>&copy; 2025 Musicologize · MusicSimilarityCheck.com</p>
       </footer>
     </section>
