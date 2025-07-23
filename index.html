@@ -62,8 +62,13 @@
       <h2 class="text-xl font-medium">Submit Your Track</h2>
       <p class="leading-relaxed">We’ll respond quickly with a quote and next steps. Your submission is secure and confidential.</p>
 
-      <form name="msc-quote" method="POST" data-netlify="true" action="/thanks.html" enctype="multipart/form-data" class="space-y-4">
-        <input type="hidden" name="form-name" value="msc-quote" />
+    <form action="https://formspree.io/f/xkgzodoq" method="POST"
+      enctype="multipart/form-data" class="space-y-4">
+ <input type="hidden" name="_subject"
+         value="New Submission: Music Similarity Check">
+      <input type="hidden" name="_next"
+       value="https://musicsimilaritycheck.com/thanks.html">
+
 
         <div>
           <label for="name" class="block font-medium mb-1">Your name</label>
