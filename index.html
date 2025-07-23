@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Music Similarity Risk Opinion Letter | 24‑ & 72‑Hour Review</title>
+  <title>Music Similarity Risk Opinion Letter | 24‑ & 72‑Hour Reviews</title>
   <meta name="description" content="Professional, confidential music‑similarity opinion letters delivered in 24 or 72 hours. Flag any risky passages before release." />
   <link rel="stylesheet" href="style.css" />
   <!-- Favicons & social preview -->
@@ -55,7 +55,7 @@
 
       <h2 class="text-xl font-medium">Submit Your Track</h2>
       <p class="leading-relaxed">We’ll respond quickly with a quote and next steps. Your submission is secure and confidential.</p>
-      <form name="msc-quote" method="POST" data-netlify="true" enctype="multipart/form-data" class="space-y-4">
+      <form name="msc-quote" method="POST" data-netlify="true" action="/thanks.html" enctype="multipart/form-data" class="space-y-4">
         <input type="hidden" name="form-name" value="msc-quote" />
         <div class="space-y-4">
           <div>
@@ -76,7 +76,7 @@
           </div>
           <div>
             <label for="turnaround" class="block font-medium mb-1">Turnaround & Fee</label>
-            <select id="turnaround"$1 style="appearance:none; -webkit-appearance:none; -moz-appearance:none;">
+            <select id="turnaround" name="turnaround" required class="input">
               <option value="">Select one</option>
               <option value="standard">72 hours (Standard — $495)</option>
               <option value="rush">24 hours (Rush — $990)</option>
