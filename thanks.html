@@ -23,11 +23,6 @@
       event_label: method
     });
   }
-</script>
- <!-- Begin Paypal -->
-  <script 
-  src="https://www.paypal.com/sdk/js?client-id=BAAvJWXxcXJl8u_Yya85K_e-tmnQef0tvMvPk313HKVoEKvnOqNbajPCt7C3X6W1K9Oee28Kx613hzrRc8&components=hosted-buttons&enable-funding=venmo&currency=USD">
-</script>
 
 </head>
 <body class="bg-gray-100 text-gray-900">
@@ -53,11 +48,7 @@
           Credit Card via Stripe — $990 (24hr)
         </a>
         <div id="paypal-container-FQCJNBCGQLVCY"></div>
-<script>
-  paypal.HostedButtons({
-    hostedButtonId: "FQCJNBCGQLVCY",
-  }).render("#paypal-container-FQCJNBCGQLVCY")
-</script>
+
         <a id="paypal-standard" href="PAYPAL_STANDARD_LINK" target="_blank" onclick="trackPayment('PayPal – 72hr');" class="bg-blue-600 text-white text-center px-4 py-3 rounded hover:bg-blue-700">
           PayPal — $495 (72hr)
         </a>
