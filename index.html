@@ -6,8 +6,20 @@
   <title>Music Similarity Risk Opinion Letter | 24‑ & 72‑Hour Review</title>
   <meta name="description" content="Professional, confidential music‑similarity opinion letters delivered in 24 or 72 hours. Flag risky passages before release and reduce copyright‑infringement exposure." />
   <link rel="canonical" href="https://musicsimilaritycheck.com/" />
-  
-  <!-- Open Graph / Facebook -->
+
+  <!-- Inline fix so <select> matches .input feel -->
+  <style>
+    select.input {
+      border: 1px solid #d1d5db; /* gray‑300 */
+      border-radius: 0.375rem;   /* rounded‑md */
+      padding: 0.5rem 0.75rem;   /* px‑3 py‑2 */
+      font-size: 1rem;           /* text‑base */
+      background-color: #fff;
+      line-height: 1.5;
+    }
+  </style>
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Music Similarity Risk Opinion Letter" />
   <meta property="og:description" content="Get a forensic musicologist’s written opinion in 24 or 72 hours before you release." />
@@ -150,16 +162,23 @@
 
   <!-- Basic client‑side validation -->
   <script>
-    const f = document.querySelector('form[name="msc-quote"]');
-    f.addEventListener('submit', e => {
-      let ok = true;
-      const msg = [];
-      if (!f.email || !f.email.validity.valid) { ok = false; msg.push('Valid email needed'); }
-      if (!f['audio-primary'].files.length) { ok = false; msg.push('Upload your primary track'); }
-      if (!f.turnaround.value) { ok = false; msg.push('Choose a turnaround & fee'); }
-      if (!ok) {
+    const form = document.querySelector('form[name="msc-quote"]');
+    const errorBox = document.getElementById('errors');
+    form.addEventListener('submit', (e) => {
+      errorBox.textContent = '';
+      const errors = [];
+      if (!form.email.value.trim() || !form.email.checkValidity()) {
+        errors.push('Please enter a valid email.');
+      }
+      if (!form['audio-primary'].files.length) {
+        errors.push('Please upload your primary track.');
+      }
+      if (!form.turnaround.value) {
+        errors.push('Please select a turnaround option.');
+      }
+      if (errors.length) {
         e.preventDefault();
-        document.getElementById('errors').innerText = msg.join('\n');
+        errorBox.textContent = errors.join(' ');
       }
     });
   </script>
