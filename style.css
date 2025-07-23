@@ -104,10 +104,12 @@ select {
 }
 
 @media (min-width: 640px) {
-  .scroll {
-    display: none;         /* hide on tablets/desktops */
+  /* hide the CTAs with class “scroll” on desktop/tablet */
+  a.scroll {
+    display: none !important;
   }
 }
+
 
 
 /* ========== Buttons (Actions Only) ========== */
