@@ -26,11 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 1.1) Track when users choose files
-  ['audio-primary','audio-secondary'].forEach(id => {
+  ['audio-primary', 'audio-secondary'].forEach(id => {
     const input = document.getElementById(id);
     if (input) {
       input.addEventListener('change', () => {
-        gtag('event','file_upload', {
+        gtag('event', 'file_upload', {
           event_category: 'Form Interaction',
           event_label: id
         });
@@ -43,8 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('form element →', form);
   if (!form) return;
 
+  form.setAttribute('novalidate', '');
+
   form.addEventListener('submit', e => {
     console.log('Submit handler triggered');
+    e.preventDefault();
+
     // remove old error messages
     form.querySelectorAll('.field-error').forEach(el => el.remove());
 
@@ -69,19 +73,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (firstError) {
-      console.log('  firstError found, preventing submit and focusing:', firstError);
-      e.preventDefault();
+      console.log('  firstError found, focusing:', firstError);
       firstError.focus();
       return;
     }
 
     // 3) On successful validation: track, then show toast
     console.log('No validation errors—tracking & showing toast now');
-    gtag('event','form_submit', {
+    gtag('event', 'form_submit', {
       event_category: 'Form Interaction',
       event_label: 'msc-quote'
     });
+
     showToast();
-    // then let the browser perform the normal POST+redirect
+    // allow the browser to perform the normal POST+redirect
+    setTimeout(() => form.submit(), 800);
   });
 });
