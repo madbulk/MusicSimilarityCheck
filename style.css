@@ -111,7 +111,7 @@ select:focus {
   transition: background-color 0.2s ease;
 }
 .btn-green { background-color: #10b981; color: #fff; }
-.btn-green:hover { background-color: #059669; }
+.btn-green:hover {  background-color: #34d399;}
 .btn-blue  { background-color: #3b82f6; color: #fff; }
 .btn-blue:hover  { background-color: #2563eb; }
 .w-full    { width: 100%; }
