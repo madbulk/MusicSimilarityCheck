@@ -1,118 +1,151 @@
-
-/* Base styles */
-body {
-  background-color: #fafafa; /* zinc-50 */
-  color: #0f172a; /* slate-900 */
-  font-family: system-ui, sans-serif;
+/* ========== Reset & Base ========== */
+html, body {
   margin: 0;
   padding: 0;
-}
-
-h1, h2 {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-h1 {
-  font-size: 1.875rem; /* text-3xl */
-}
-
-h2 {
-  font-size: 1.25rem; /* text-xl */
-}
-
-p, li {
-  font-size: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f9fafb;
+  color: #111827;
   line-height: 1.5;
 }
 
-/* Layout and spacing */
-header, footer {
-  text-align: center;
-  padding: 2rem 1rem;
+/* ========== Layout Utilities ========== */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 100vh;
 }
 
-main {
-  max-width: 48rem; /* max-w-3xl */
-  margin: 0 auto;
-  padding: 1.5rem;
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
 }
 
-section {
-  margin-bottom: 3rem;
+.max-w-2xl {
+  max-width: 42rem;
+  width: 100%;
 }
 
-ul {
-  padding-left: 1.5rem; /* ml-6 */
+/* ========== Typography ========== */
+.text-sm {
+  font-size: 0.875rem;
+}
+.text-base {
+  font-size: 1rem;
+}
+.text-lg {
+  font-size: 1.125rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+/* ========== Cards and Containers ========== */
+.card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+/* ========== Lists ========== */
+ul.list {
+  padding-left: 1.25rem;
   list-style-type: disc;
 }
-
-ol {
-  padding-left: 1.5rem;
-  list-style-type: decimal;
+ul.list li {
+  margin-bottom: 0.5rem;
 }
 
-a {
+/* ========== Buttons (Used ONLY for Actions) ========== */
+.btn {
   display: inline-block;
-  background-color: #059669; /* emerald-600 */
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  margin-top: 1.25rem;
-}
-
-a:hover {
-  background-color: #047857;
-}
-
-.btn-link {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #3b82f6;
-  color: white;
-  text-decoration: none;
+  padding: 0.65rem 1.1rem;
   border-radius: 0.375rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
   transition: background-color 0.2s ease;
-}
-.btn-link:hover {
-  background-color: #2563eb;
-}
-
-
-
-/* Form */
-form {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-input, textarea, select {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.25rem;
-  border: 1px solid #d1d5db; /* border-gray-300 */
-  border-radius: 0.375rem;
-  box-sizing: border-box;
-}
-
-button[type="submit"] {
-  background-color: #059669;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 0.375rem;
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
-  background-color: #047857;
+.btn-green {
+  background-color: #10b981;
+  color: white;
+}
+.btn-green:hover {
+  background-color: #059669;
 }
 
-/* Footer */
-footer {
-  font-size: 0.875rem;
-  color: #4b5563; /* gray-600 */
+.btn-blue {
+  background-color: #3b82f6;
+  color: white;
+}
+.btn-blue:hover {
+  background-color: #2563eb;
+}
+
+/* ========== Links ========== */
+.text-link {
+  color: #2563eb;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.text-link:hover {
+  color: #1d4ed8;
+  cursor: pointer;
+}
+
+/* ========== Optional Form Elements ========== */
+input[type="text"],
+input[type="email"],
+input[type="file"],
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+/* ========== Spacing Helpers ========== */
+.p-6 {
+  padding: 1.5rem;
 }
