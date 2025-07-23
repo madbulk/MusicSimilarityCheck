@@ -84,8 +84,7 @@
 <body class="bg-light text-dark font-sans">
   <main class="flex-center p-6 min-h-screen bg-light">
     <section class="card max-w-2xl w-full">
-      <h1 class="text-2xl font-semibold mb-2 text-center">Music Similarity Risk Opinion Letter</h1>
-      <p class="text-base text-muted text-center mb-6">Choose <strong>Standard (72 hr) $495</strong> or <strong>Rush (24 hr) $990</strong></p>
+      <h1 class="text-2xl font-semibold mb-4 text-center">Music Similarity Risk Opinion Letter</h1>
 
       <h2 class="text-xl font-medium mb-2">What I Do</h2>
       <p class="leading-relaxed mb-6">I audit your track—either against a named reference or, if none is provided, by scanning for protectable elements that echo well‑known songs. Any risky passages are flagged and practical musical fixes suggested.</p>
@@ -112,7 +111,7 @@
         <div class="grid gap-4 md:grid-cols-2">
           <div class="col-span-2 md:col-span-1">
             <label for="name" class="block font-medium mb-1">Your name</label>
-            <input id="name" name="name" required class="input" />
+            <input type="text" id="name" name="name" required class="input" />
           </div>
           <div class="col-span-2 md:col-span-1">
             <label for="email" class="block font-medium mb-1">Email</label>
@@ -127,11 +126,11 @@
             <input type="file" id="audio-secondary" name="audio-secondary" accept="audio/*" class="input" />
           </div>
           <div class="col-span-2 md:col-span-1">
-            <label for="turnaround" class="block font-medium mb-1">Turnaround time</label>
+            <label for="turnaround" class="block font-medium mb-1">Turnaround & fee</label>
             <select id="turnaround" name="turnaround" required class="input">
               <option value="">Select one</option>
-              <option value="standard">72 hours (Standard)</option>
-              <option value="rush">24 hours (Rush — 2× fee)</option>
+              <option value="standard">72 hours (Standard — $495)</option>
+              <option value="rush">24 hours (Rush — $990)</option>
             </select>
           </div>
           <div class="col-span-2 md:col-span-1">
@@ -157,7 +156,7 @@
       const msg = [];
       if (!f.email || !f.email.validity.valid) { ok = false; msg.push('Valid email needed'); }
       if (!f['audio-primary'].files.length) { ok = false; msg.push('Upload your primary track'); }
-      if (!f.turnaround.value) { ok = false; msg.push('Choose a turnaround time'); }
+      if (!f.turnaround.value) { ok = false; msg.push('Choose a turnaround & fee'); }
       if (!ok) {
         e.preventDefault();
         document.getElementById('errors').innerText = msg.join('\n');
