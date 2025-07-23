@@ -56,6 +56,8 @@
         Get a professional opinion letter delivered in 24 or 72 hours to flag any risky passages before release.
       </p>
 
+<a href="#form" class="btn btn-green scroll">Start Your Review</a>
+      
       <h2 class="text-xl font-medium">What I Do</h2>
       <p class="leading-relaxed">
         I audit your track—either against a named reference or, if none is provided, by scanning for protectable
@@ -83,10 +85,16 @@
       </p>
 
      <!-- ===== Formspree form (emails you + redirects) ===== -->
-<form action="https://formspree.io/f/xkgzodoq"
-      method="POST"
-      enctype="multipart/form-data"
-      class="space-y-4">
+<form
+  id="form"
+  action="https://formspree.io/f/xkgzodoq"
+  method="POST"
+  enctype="multipart/form-data"
+  class="space-y-4"
+>
+  <!-- …the rest of your inputs/buttons… -->
+</form>
+
 
   <input type="hidden" name="_subject" value="New Submission: Music Similarity Check">
   <input type="hidden" name="_next"    value="https://musicsimilaritycheck.com/thanks.html">
