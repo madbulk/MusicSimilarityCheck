@@ -3,130 +3,177 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Music Similarity Risk Opinion Letter | 24‑ or 72‑Hour Review</title>
-  <meta name="description" content="Get a professional, confidential music‑similarity opinion letter in 24 or 72 hours and reduce copyright‑infringement risk before release." />
-  <link rel="stylesheet" href="style.css" />
+  <title>Music Similarity Risk Opinion Letter | 24‑ & 72‑Hour Review</title>
+  <meta name="description" content="Professional, confidential music‑similarity opinion letters delivered in 24 or 72 hours. Flag risky passages before release and reduce copyright‑infringement exposure." />
   <link rel="canonical" href="https://musicsimilaritycheck.com/" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Music Similarity Risk Opinion Letter" />
+  <meta property="og:description" content="Get a forensic musicologist’s written opinion in 24 or 72 hours before you release." />
+  <meta property="og:url" content="https://musicsimilaritycheck.com/" />
+  <meta property="og:image" content="/assets/og-preview.jpg" />
 
-  <!-- Google Analytics GA‑4 -->
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Music Similarity Risk Opinion Letter" />
+  <meta name="twitter:description" content="24‑ or 72‑hour expert clearance. Reduce infringement risk." />
+  <meta name="twitter:image" content="/assets/og-preview.jpg" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "MusicSimilarityCheck",
+    "url": "https://musicsimilaritycheck.com",
+    "serviceType": "Music Similarity Risk Opinion Letter",
+    "description": "Professional music‑similarity opinion letters delivered in 24 or 72 hours.",
+    "provider": {
+      "@type": "Person",
+      "name": "Brian McBrearty"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Standard Review (72 hr)",
+        "price": "495",
+        "priceCurrency": "USD",
+        "sku": "MSC‑STD",
+        "description": "72‑hour turnaround music similarity opinion letter"
+      },
+      {
+        "@type": "Offer",
+        "name": "Rush Review (24 hr)",
+        "price": "990",
+        "priceCurrency": "USD",
+        "sku": "MSC‑RSH",
+        "description": "24‑hour turnaround music similarity opinion letter"
+      }
+    ],
+    "sameAs": [
+      "https://www.musicologize.com",
+      "https://twitter.com/Musicologize"
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-80MDTLB0JK"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-80MDTLB0JK');
   </script>
-
-  <!-- JSON‑LD structured data -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ProfessionalService",
-    "name":"MusicSimilarityCheck",
-    "url":"https://musicsimilaritycheck.com",
-    "serviceType":"Music Similarity Risk Opinion Letter (24‑ or 72‑Hour)",
-    "provider":{
-      "@type":"Person",
-      "name":"Brian McBrearty"
-    },
-    "areaServed":"Worldwide"
-  }
+  <script>
+    function trackPayment(method) {
+      gtag('event', 'payment_click', {
+        event_category: 'Payment',
+        event_label: method
+      });
+    }
   </script>
 </head>
 <body class="bg-light text-dark font-sans">
   <main class="flex-center p-6 min-h-screen bg-light">
-    <section class="card max-w-3xl w-full space-y-8">
-
-      <!-- Hero -->
-      <header class="space-y-2 text-center">
-        <h1 class="text-3xl font-semibold">Music Similarity Risk Opinion Letter</h1>
-        <p class="text-md text-muted">Expert Review in 24 or 72 Hours · A service of Musicologize</p>
-        <a href="#form" class="btn btn-green inline-block mt-4">Start Your Review</a>
+    <section class="card max-w-3xl w-full">
+      <header class="mb-6 text-center">
+        <h1 class="text-3xl font-semibold mb-2">Music Similarity Risk Opinion Letter</h1>
+        <p class="text-base text-muted">Choose 24‑hr (Rush) or 72‑hr (Standard) turnaround</p>
       </header>
 
-      <!-- What / Why / How -->
-      <div class="space-y-6">
-        <section>
-          <h2 class="text-xl font-medium mb-2">What I Do</h2>
-          <p class="leading-relaxed">I audit your track—either against a named reference or, if none is provided, by scanning for protectable elements that echo well‑known songs. I flag any risky passages and suggest practical musical fixes.</p>
-        </section>
+      <section class="mb-8">
+        <h2 class="text-xl font-medium mb-2">What I Do</h2>
+        <p class="leading-relaxed">I audit your track—either against a named reference or, if none is provided, by scanning for protectable elements that echo well‑known songs. Any risky passages are flagged and practical musical fixes suggested.</p>
+      </section>
 
-        <section>
-          <h2 class="text-xl font-medium mb-2">Why It Matters</h2>
-          <ul class="list mb-2 leading-relaxed">
-            <li><strong>Secure your placement.</strong> Agencies and rights teams often require documented review before broadcast.</li>
-            <li><strong>Avoid costly rewrites.</strong> Fix issues now, not under threat of litigation.</li>
-            <li><strong>Reduce statutory‑damage exposure.</strong> A documented good‑faith review weighs against claims of <em>willful</em> infringement.</li>
-          </ul>
-        </section>
+      <section class="mb-8">
+        <h2 class="text-xl font-medium mb-2">Why It Matters</h2>
+        <ul class="list mb-4 leading-relaxed">
+          <li><strong>Secure placements.</strong> Rights teams often require documented review before broadcast.</li>
+          <li><strong>Avoid costly rewrites.</strong> Fix issues now—not under threat of litigation.</li>
+          <li><strong>Reduce statutory‑damage exposure.</strong> A documented good‑faith review weighs against any claim of <em>willful</em> infringement.*</li>
+        </ul>
+      </section>
 
-        <section>
-          <h2 class="text-xl font-medium mb-2">How It Works</h2>
-          <ol class="list-decimal pl-6 mb-2 leading-relaxed">
-            <li>Upload your track (and any reference song).</li>
-            <li>Receive quote &amp; timeline confirmation (usually within minutes).</li>
-            <li>Get your PDF opinion letter within the timeframe you select (24 or 72 hours).</li>
-          </ol>
-          <p><strong>Flat fee:</strong> $550 – $1,000 (complexity &amp; revisions determine final price).</p>
-        </section>
-      </div>
+      <section class="mb-8">
+        <h2 class="text-xl font-medium mb-2">How It Works</h2>
+        <ol class="list-decimal mb-4 ml-6 leading-relaxed">
+          <li>Upload your track (and any reference song).</li>
+          <li>Receive quote & timeline confirmation (usually minutes).</li>
+          <li>Get your PDF opinion letter within the chosen timeframe.</li>
+        </ol>
+        <p><strong>Flat fee:</strong> $495 (72 hr) or $990 (24 hr).</p>
+      </section>
 
       <!-- Intake Form -->
-      <section id="form" class="space-y-4">
+      <section id="form" class="mb-8">
         <h2 class="text-xl font-medium mb-2">Submit Your Track</h2>
-        <p class="leading-relaxed">We’ll respond quickly with a quote and next steps. Your submission is secure and confidential.</p>
-
-        <form action="https://formspree.io/f/xkgzodoq" method="POST" enctype="multipart/form-data" class="space-y-4">
-          <input type="hidden" name="_subject" value="New Submission: Music Similarity Check" />
-          <input type="hidden" name="_next" value="https://musicsimilaritycheck.com/thanks.html" />
-
-          <div class="grid gap-4 sm:grid-cols-2">
-            <div class="flex flex-col">
-              <label for="name" class="mb-1 font-medium">Your Name</label>
+        <p class="mb-4 leading-relaxed">We’ll respond quickly with a quote and next steps. Your submission is secure and confidential.</p>
+        <form name="msc-quote" method="POST" data-netlify="true" enctype="multipart/form-data">
+          <input type="hidden" name="form-name" value="msc-quote" />
+          <div class="grid gap-4 md:grid-cols-2">
+            <div class="col-span-2 md:col-span-1">
+              <label for="name" class="block font-medium mb-1">Your name</label>
               <input id="name" name="name" required class="input" />
             </div>
-            <div class="flex flex-col">
-              <label for="_replyto" class="mb-1 font-medium">Email</label>
-              <input type="email" id="_replyto" name="_replyto" required class="input" />
+            <div class="col-span-2 md:col-span-1">
+              <label for="email" class="block font-medium mb-1">Email</label>
+              <input type="email" id="email" name="email" required class="input" />
+            </div>
+            <div class="col-span-2">
+              <label for="audio-primary" class="block font-medium mb-1">Upload your primary track</label>
+              <input type="file" id="audio-primary" name="audio-primary" accept="audio/*" required class="input" />
+            </div>
+            <div class="col-span-2">
+              <label for="audio-secondary" class="block font-medium mb-1">Upload another track to compare (optional)</label>
+              <input type="file" id="audio-secondary" name="audio-secondary" accept="audio/*" class="input" />
+            </div>
+            <div class="col-span-2 md:col-span-1">
+              <label for="turnaround" class="block font-medium mb-1">Turnaround time</label>
+              <select id="turnaround" name="turnaround" required class="input">
+                <option value="">Select one</option>
+                <option value="standard">72 hours (Standard)</option>
+                <option value="rush">24 hours (Rush — 2× fee)</option>
+              </select>
+            </div>
+            <div class="col-span-2 md:col-span-1">
+              <label for="notes" class="block font-medium mb-1">Notes or concerns</label>
+              <textarea id="notes" name="notes" rows="4" class="input"></textarea>
             </div>
           </div>
-
-          <div class="flex flex-col">
-            <label for="audio-primary" class="mb-1 font-medium">Upload Your Primary Track</label>
-            <input type="file" id="audio-primary" name="audio-primary" accept="audio/*" required class="input-file" />
-          </div>
-
-          <div class="flex flex-col">
-            <label for="audio-secondary" class="mb-1 font-medium">Upload Reference Track (Optional)</label>
-            <input type="file" id="audio-secondary" name="audio-secondary" accept="audio/*" class="input-file" />
-            <small class="text-sm text-muted">Need to upload more? Mention it in the notes and we’ll help.</small>
-          </div>
-
-          <div class="flex flex-col">
-            <label for="turnaround" class="mb-1 font-medium">Turnaround Time</label>
-            <select id="turnaround" name="turnaround" required class="input-select">
-              <option value="">Select one</option>
-              <option value="standard">72 hours (Standard)</option>
-              <option value="rush">24 hours (Rush — 2× fee)</option>
-            </select>
-          </div>
-
-          <div class="flex flex-col">
-            <label for="notes" class="mb-1 font-medium">Notes or Concerns</label>
-            <textarea id="notes" name="notes" rows="4" class="input"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-green w-full sm:w-auto">Submit & Get Started</button>
+          <p id="errors" class="text-red-600 mt-4" aria-live="assertive"></p>
+          <button type="submit" class="btn btn-green mt-6">Submit & Get Started</button>
         </form>
       </section>
 
-      <!-- Footnote -->
-      <p class="text-xs text-muted">*While a professional review demonstrates good‑faith diligence, it cannot guarantee that no claim will ever be made.</p>
-
-      <footer class="pt-6 border-t text-center text-sm text-muted">
-        © 2025 Musicologize · MusicSimilarityCheck.com
+      <footer class="text-sm text-center text-muted pt-4 border-t">
+        <p>&copy; 2025 Musicologize · MusicSimilarityCheck.com</p>
       </footer>
     </section>
   </main>
+
+  <!-- Basic client‑side validation -->
+  <script>
+    const f = document.querySelector('form[name="msc-quote"]');
+    f.addEventListener('submit', e => {
+      let ok = true;
+      const msg = [];
+      if (!f.email || !f.email.validity.valid) { ok = false; msg.push('Valid email needed'); }
+      if (!f['audio-primary'].files.length) { ok = false; msg.push('Upload your primary track'); }
+      if (!f.turnaround.value) { ok = false; msg.push('Choose a turnaround time'); }
+      if (!ok) {
+        e.preventDefault();
+        document.getElementById('errors').innerText = msg.join('\n');
+      }
+    });
+  </script>
 </body>
 </html>
