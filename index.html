@@ -76,7 +76,7 @@
           </div>
           <div>
             <label for="turnaround" class="block font-medium mb-1">Turnaround & Fee</label>
-            <select id="turnaround" name="turnaround" required class="input">
+            <select id="turnaround"$1 style="appearance:none; -webkit-appearance:none; -moz-appearance:none;">
               <option value="">Select one</option>
               <option value="standard">72 hours (Standard — $495)</option>
               <option value="rush">24 hours (Rush — $990)</option>
@@ -103,5 +103,6 @@
       </div>
     </section>
   </main>
+  <!-- Note: If the form submit leads to a 404, please verify Netlify Forms detection is enabled in the site settings and that the hidden redirect input uses name="redirect" -->
 </body>
 </html>
