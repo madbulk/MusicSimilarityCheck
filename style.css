@@ -90,13 +90,14 @@ select {
   background: #fff;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  border-color: #2563eb;
+.input:focus-visible {
   box-shadow: 0 0 0 3px rgba(37,99,235,0.25);
 }
+.input:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+
 
 /* ========== Buttons (Actions Only) ========== */
 .btn {
@@ -111,7 +112,14 @@ select:focus {
   transition: background-color 0.2s ease;
 }
 .btn-green { background-color: #10b981; color: #fff; }
-.btn-green:hover {  background-color: #34d399;}
+.btn-green:hover {
+  background-color: #34d399;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
 .btn-blue  { background-color: #3b82f6; color: #fff; }
 .btn-blue:hover  { background-color: #2563eb; }
 .w-full    { width: 100%; }
@@ -124,3 +132,7 @@ select:focus {
   transition: color 0.2s ease;
 }
 .link:hover { color: #1d4ed8; }
+
+@media (min-width:640px){
+  .card { padding: 3rem; }
+}
