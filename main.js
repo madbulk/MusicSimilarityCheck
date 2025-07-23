@@ -1,5 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // 0) Toast helper
+  function showToast() {
+    const toast = document.getElementById('toast');
+    if (!toast) return;
+    toast.classList.remove('hidden');
+    setTimeout(() => toast.classList.add('show'), 10);
+    setTimeout(() => {
+      toast.classList.remove('show');
+      setTimeout(() => toast.classList.add('hidden'), 400);
+    }, 3000);
+  }
+
   // 1) Smooth-scroll for any link with class "scroll"
   document.querySelectorAll('a.scroll').forEach(link => {
     link.addEventListener('click', e => {
@@ -14,18 +26,18 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!form) return;
 
   form.addEventListener('submit', e => {
-    // Remove old error messages
+    // remove old error messages
     form.querySelectorAll('.field-error').forEach(el => el.remove());
 
     let firstError = null;
 
-    // Check each required field
+    // validate each required field
     form.querySelectorAll('[required]').forEach(el => {
       if (!el.value.trim()) {
         el.classList.add('error');
         if (!firstError) firstError = el;
 
-        // Inject inline message
+        // inject inline message
         const msg = document.createElement('span');
         msg.className = 'text-sm text-red-600 field-error';
         msg.textContent = `${el.previousElementSibling.textContent.replace(':','')} is required`;
@@ -38,7 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (firstError) {
       e.preventDefault();
       firstError.focus();
+      return;
     }
+
+    // 3) On successful validation, show toast
+    showToast();
+    // then let the browser perform the normal POST+redirect
   });
 
 });
