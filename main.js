@@ -25,6 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 1.1) Track when users choose files
+  ['audio-primary','audio-secondary'].forEach(id => {
+    const input = document.getElementById(id);
+    if (input) {
+      input.addEventListener('change', () => {
+        gtag('event','file_upload', {
+          event_category: 'Form Interaction',
+          event_label: id
+        });
+      });
+    }
+  });
+
   // 2) Inline errors on empty required fields
   const form = document.querySelector('form[action^="https://formspree"]');
   console.log('form element →', form);
@@ -62,8 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // 3) On successful validation, show toast
-    console.log('No validation errors—showing toast now');
+    // 3) On successful validation: track, then show toast
+    console.log('No validation errors—tracking & showing toast now');
+    gtag('event','form_submit', {
+      event_category: 'Form Interaction',
+      event_label: 'msc-quote'
+    });
     showToast();
     // then let the browser perform the normal POST+redirect
   });
