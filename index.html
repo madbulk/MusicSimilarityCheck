@@ -8,14 +8,16 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     select.input {
-      border-radius: var(--radius);
-      padding: var(--space-2) var(--space-3);
-      font-size: 1rem;
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
+      display: block;
+      width: 100%;
+      padding: var(--space-2) var(--space-3) !important;
+      font-size: 1rem !important;
+      appearance: none !important;
+      -webkit-appearance: none !important;
+      -moz-appearance: none !important;
+      border-radius: var(--radius) !important;
     }
-  </style>
+</style>
   <!-- Favicons & social preview -->
   <link rel="icon" href="/assets/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
@@ -65,7 +67,7 @@
 
       <h2 class="text-xl font-medium">Submit Your Track</h2>
       <p class="leading-relaxed">We’ll respond quickly with a quote and next steps. Your submission is secure and confidential.</p>
-      <form name="msc-quote" method="POST" data-netlify="true" action="/thanks.html" enctype="multipart/form-data" class="space-y-4">
+      <form name="msc-quote"$1$2>
         <input type="hidden" name="form-name" value="msc-quote" />
         <div class="space-y-4">
           <div>
