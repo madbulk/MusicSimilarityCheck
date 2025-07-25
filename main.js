@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 2) Inline errors on empty required fields
+  // 2) Inline errors on empty required fields, including checkbox
   const form = document.querySelector('form[action^="https://formspree"]');
   console.log('form element →', form);
   if (!form) return;
@@ -54,19 +54,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let firstError = null;
 
-    // validate each required field
+    // validate each required field or checkbox
     form.querySelectorAll('[required]').forEach(el => {
-      console.log('  checking required field:', el);
-      if (!el.value.trim()) {
-        console.log('    → empty! marking error on', el);
+      let hasError = false;
+
+      if (el.type === 'checkbox') {
+        if (!el.checked) hasError = true;
+      } else if (!el.value.trim()) {
+        hasError = true;
+      }
+
+      if (hasError) {
+        console.log('    → validation error on', el);
         el.classList.add('error');
         if (!firstError) firstError = el;
+
+        // determine label text
+        let labelText;
+        if (el.type === 'checkbox') {
+          const wrapper = el.closest('label');
+          labelText = wrapper ? wrapper.textContent.trim() : 'This field';
+        } else {
+          labelText = el.previousElementSibling.textContent.trim();
+        }
+        labelText = labelText.replace(/:$/, '');
 
         // inject inline message
         const msg = document.createElement('span');
         msg.className = 'text-sm text-red-600 field-error';
-        msg.textContent = `${el.previousElementSibling.textContent.replace(':','')} is required`;
-        el.after(msg);
+        msg.textContent = `${labelText} is required`;
+
+        if (el.type === 'checkbox') {
+          el.closest('.space-y-2').appendChild(msg);
+        } else {
+          el.after(msg);
+        }
       } else {
         el.classList.remove('error');
       }
