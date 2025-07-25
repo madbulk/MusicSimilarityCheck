@@ -1,3 +1,15 @@
+# Allow Googlebot to crawl freely
+User-agent: Googlebot
+Disallow:
+
+# Allow Bingbot to crawl freely
+User-agent: Bingbot
+Disallow:
+
+# All other crawlers: allowed, but slow down
 User-agent: *
 Disallow:
+Crawl-delay: 10
+
+# Sitemap declaration
 Sitemap: https://musicsimilaritycheck.com/sitemap.xml
