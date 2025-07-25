@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,7 +23,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-80MDTLB0JK"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-80MDTLB0JK');
     function trackPayment(method){
@@ -33,7 +33,6 @@
 </head>
 
 <body class="bg-light text-dark font-sans">
-
   <!-- Toast confirmation -->
   <div id="toast" class="toast hidden" role="status" aria-live="polite">
     ✔ Submission sent – check your inbox.
@@ -44,63 +43,57 @@
       <h1 class="text-2xl font-semibold">Thank you for your submission!</h1>
       <p class="leading-relaxed">
         We’ve received your track(s) and submission details. To proceed, please complete payment using one of the options below.
-        Need help or prefer a custom invoice? <a href="mailto:musicologize@gmail.com" class="link">Contact us here</a>.
+        Need help or prefer a custom invoice? <a href="mailto:support@musicsimilaritycheck.com" class="link">Contact us here</a>.
       </p>
 
-      <h2 class="text-xl font-medium">Choose Your Turnaround Time&amp; Make Payment through Stripe or Paypal.</h2>
+      <h2 class="text-xl font-medium">Choose Your Review Speed &amp; Pay</h2>
       <ul class="list mb-4">
-        <li><strong>Standard Musicologist's Analysis (72 hrs or less)</strong> — $495</li>
-        <li><strong>Expedited Musicologist's Analysis (24 hrs or less)</strong> — $900</li>
+        <li><strong>Standard (72 hr)</strong> — $495</li>
+        <li><strong>Expedited (24 hr)</strong> — $990</li>
       </ul>
 
-      <div class="grid-2 gap-4">
+      <div class="grid-2 gap-4 mb-6">
         <a href="https://buy.stripe.com/test_eVqaEZceEdXo0TV36l3AY01" target="_blank"
            onclick="trackPayment('Stripe – 72hr');" class="btn btn-green">
-          Credit Card via Stripe — $495 (72 hr)
+          Credit Card via Stripe — $495<br>(72 hr)
         </a>
         <a href="https://buy.stripe.com/test_eVqaEZceEdXo0TV36l3AY01" target="_blank"
            onclick="trackPayment('Stripe – 24hr');" class="btn btn-green">
-          Credit Card via Stripe — $900 (24 hr | 2x rate)
+          Credit Card via Stripe — $990<br>(24 hr)
         </a>
         <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=438T372EVN63A"
            target="_blank" onclick="trackPayment('PayPal – 72hr');" class="btn btn-blue">
-          PayPal — $495 (72 hr)
+          PayPal — $495<br>(72 hr)
         </a>
         <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6DMC5GTNB96Q2"
            target="_blank" onclick="trackPayment('PayPal – 24hr');" class="btn btn-blue">
-          PayPal — $900 (24 hr | 2x rate)
+          PayPal — $990<br>(24 hr)
         </a>
       </div>
 
-    
+      <!-- UPDATED TERMS SECTION -->
+      <h2 class="text-xl font-medium">Service Terms</h2>
+      <p class="text-sm leading-relaxed">
+        By submitting payment, you agree to our
+        <a href="/letter-of-engagement.html" class="link">Letter of Engagement</a>.
+      </p>
 
-<h2 class="text-xl font-medium">Service Terms</h2>
-<p class="text-sm leading-relaxed">
-  By submitting payment, you agree to our
-  <a href="/letter-of-engagement.html" class="link">Letter of Engagement</a>.
-</p>
-
-<h3 class="text-lg font-medium mt-4">Terms at a Glance</h3>
-<ul class="list text-sm leading-relaxed space-y-1">
-  <li><strong>Opinion only.</strong> Not legal advice.</li>
-  <li><strong>72 hr Standard / 24 hr Rush.</strong></li>
-  <li><strong>Minor edits free;</strong> larger work billed hourly.</li>
-  <li><strong>Confidential.</strong> No outcome guarantee.</li>
-  <li><strong>Governing law:</strong> California, USA.</li>
-</ul>
-
-
-
-
-      
+      <h3 class="text-lg font-medium mt-4">Terms at a Glance</h3>
+      <ul class="list text-sm leading-relaxed space-y-1">
+        <li><strong>Opinion only.</strong> Not legal advice.</li>
+        <li><strong>72 hr Standard / 24 hr Rush.</strong></li>
+        <li><strong>Minor edits free;</strong> larger work billed hourly.</li>
+        <li><strong>Confidential.</strong> No outcome guarantee.</li>
+        <li><strong>Governing law:</strong> California, USA.</li>
+      </ul>
 
       <footer class="text-center border-t pt-4 space-y-2 text-sm">
-        <nav class="space-x-4"><br clear=all><br> 
+        <nav class="space-x-4">
           <a href="/" class="link">Home</a>
-          <a href="https://musicologize.com/" class="link" target="_blank" rel="noopener">Forensic musicology insights and education.</a>
-<p>&copy; 2025 Musicologize &middot; MusicSimilarityCheck.com</p>
+          <a href="https://musicologize.com/" class="link" target="_blank" rel="noopener">Forensic musicology insights</a>
+          <a href="https://soundcomet.com/" class="link" target="_blank" rel="noopener">AI ideas for composers</a>
         </nav>
-        
+        <p>&copy; 2025 Musicologize &middot; MusicSimilarityCheck.com</p>
       </footer>
     </section>
   </main>
