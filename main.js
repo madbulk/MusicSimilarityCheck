@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // 0) Toast helper
   function showToast() {
     const toast = document.getElementById('toast');
-    console.log('showToast() → toast element:', toast);
     if (!toast) return;
     toast.classList.remove('hidden');
     setTimeout(() => toast.classList.add('show'), 10);
@@ -17,10 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1) Smooth-scroll for any link with class "scroll"
   document.querySelectorAll('a.scroll').forEach(link => {
     link.addEventListener('click', e => {
-      console.log('scroll link clicked:', link);
       e.preventDefault();
       const target = document.querySelector(link.getAttribute('href'));
-      console.log('  → scrolling to:', target);
       if (target) target.scrollIntoView({ behavior: 'smooth' });
     });
   });
@@ -38,15 +35,51 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 2) Inline errors on empty required fields, including checkbox
+  // 2) Form reference
   const form = document.querySelector('form[action^="https://formspree"]');
-  console.log('form element →', form);
   if (!form) return;
 
+  // -----------------------------
+  // 2.1 Persistent-draft helper
+  // -----------------------------
+  const FORM_STORAGE_KEY = 'msc_draft';
 
+  function saveDraft() {
+    const data = {};
+    form.querySelectorAll('input, textarea').forEach(el => {
+      if (el.type === 'file') return;                 // skip file inputs
+      if (el.type === 'checkbox') {
+        data[el.id] = el.checked;
+      } else {
+        data[el.id] = el.value;
+      }
+    });
+    sessionStorage.setItem(FORM_STORAGE_KEY, JSON.stringify(data));
+  }
 
+  function restoreDraft() {
+    const raw = sessionStorage.getItem(FORM_STORAGE_KEY);
+    if (!raw) return;
+    try {
+      const data = JSON.parse(raw);
+      Object.entries(data).forEach(([id, val]) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        if (el.type === 'checkbox') {
+          el.checked = val;
+        } else {
+          el.value = val;
+        }
+      });
+    } catch { /* ignore corrupted JSON */ }
+  }
+
+  restoreDraft();                       // repopulate on load
+  form.addEventListener('input', saveDraft);
+  form.addEventListener('change', saveDraft);
+
+  // 3) Validation + submit handler
   form.addEventListener('submit', e => {
-    console.log('Submit handler triggered');
     e.preventDefault();
 
     // remove old error messages
@@ -54,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let firstError = null;
 
-    // validate each required field or checkbox
+    // validate required fields
     form.querySelectorAll('[required]').forEach(el => {
       let hasError = false;
 
@@ -65,11 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (hasError) {
-        console.log('    → validation error on', el);
         el.classList.add('error');
         if (!firstError) firstError = el;
 
-        // determine label text
+        // label text
         let labelText;
         if (el.type === 'checkbox') {
           const wrapper = el.closest('label');
@@ -79,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         labelText = labelText.replace(/:$/, '');
 
-        // inject inline message
+        // inline message
         const msg = document.createElement('span');
         msg.className = 'text-sm text-red-600 field-error';
         msg.textContent = `${labelText} is required`;
@@ -95,20 +127,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (firstError) {
-      console.log('  firstError found, focusing:', firstError);
       firstError.focus();
       return;
     }
 
-    // 3) On successful validation: track, then show toast
-    console.log('No validation errors—tracking & showing toast now');
+    // valid — clear draft, track, toast, then submit
+    sessionStorage.removeItem(FORM_STORAGE_KEY);
+
     gtag('event', 'form_submit', {
       event_category: 'Form Interaction',
       event_label: 'msc-quote'
     });
 
     showToast();
-    // allow the browser to perform the normal POST+redirect
     setTimeout(() => form.submit(), 800);
   });
 });
