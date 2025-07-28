@@ -1,3 +1,36 @@
+/* === Brand Accent === */
+:root {
+  --msc-blue: #4291bc;           /* primary accent */
+  --msc-blue-10: #e7f1f7;        /* 10 % tint for gradient foot */
+  --msc-blue-5:  #f1f7fa;        /* 5 % tint for mid-gradient */
+}
+
+/* === Page background === */
+body {
+  background: linear-gradient(
+      to bottom,
+      #ffffff 0%,
+      var(--msc-blue-5) 70%,
+      var(--msc-blue-10) 100%
+  );
+  color: #111;                  /* keep text dark for contrast */
+}
+
+/* === Card (form container) === */
+.card {
+  background: #fff;
+  border: 1px solid #e0ecf5;     /* very light blue-grey stroke */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* === Accent buttons / links (already using .btn-green etc.) === */
+/* Feel free to create .btn-blue later that uses var(--msc-blue) */
+
+
+
+
+
 /* ========== Root & Design Tokens ========== */
 :root {
   --radius: 0.375rem;          /* 6 px rounding everywhere            */
