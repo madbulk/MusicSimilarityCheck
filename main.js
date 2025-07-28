@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('form element →', form);
   if (!form) return;
 
-  form.setAttribute('novalidate', '');
+
 
   form.addEventListener('submit', e => {
     console.log('Submit handler triggered');
