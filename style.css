@@ -27,6 +27,35 @@ body {
 /* === Accent buttons / links (already using .btn-green etc.) === */
 /* Feel free to create .btn-blue later that uses var(--msc-blue) */
 
+
+/* === About page helpers === */
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;       /* 24 px between photo & text on mobile */
+}
+
+@media (min-width: 640px) {   /* ≥ 640 px = SM breakpoint */
+  .about-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;       /* 32 px on desktop */
+  }
+}
+
+.profile-pic {
+  width: 160px;      /* dial size here */
+  height: 160px;
+  object-fit: cover;
+  object-position: top;  /* show a bit more hair */
+  border-radius: 9999px;
+  flex-shrink: 0;    /* don’t let text squeeze it */
+}
+
+
+
+
+
 /* — Profile photo helper — */
 .profile-pic {
   width: 128px;          /* 8 rem ≈ 2 inches on desktop */
