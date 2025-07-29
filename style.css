@@ -27,6 +27,16 @@ body {
 /* === Accent buttons / links (already using .btn-green etc.) === */
 /* Feel free to create .btn-blue later that uses var(--msc-blue) */
 
+/* — Profile photo helper — */
+.profile-pic {
+  width: 128px;          /* 8 rem ≈ 2 inches on desktop */
+  height: 128px;         /* keep it square */
+  object-fit: cover;     /* crop, don’t squish */
+  border-radius: 9999px; /* full circle */
+  display: block;
+  margin-left: auto;     /* center horizontally */
+  margin-right: auto;
+}
 
 
 
